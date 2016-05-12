@@ -6,14 +6,13 @@ if (process.env.NODE_ENV !== 'production') { //开发环境下 raw-loader  html�
 require("./../sass/style.scss");
 require("./pJqueryAppearAnimateCSS3/jac.js"); //动画
 // require("./rotate3d/do.js");
-//require("./superslide/jquery.SuperSlide.2.1.2.js");
+require("./superslide/jquery.SuperSlide.2.1.1.js");
+//require("./superslide/TouchSlide.1.1.js");
 //require("./../css/style.css");
 //require("./../sass/style.scss");
 //require("./../sass/style.less");
 
-// $(function(){
-// 	jQuery(".slidebox").slide({titCell:".hd ul",mainCell:".bd", effect:"leftLoop",autoPlay:"true",autoPage:"true"});
-// })
+
 
 $(function() {
 	function resize() {
@@ -29,3 +28,10 @@ $(function() {
 	});
 
 });
+
+
+$(function(){
+ 	//jQuery(".slidebox").slide({titCell:".hd ul",mainCell:".bd", effect:"fade",autoPlay:"true",autoPage:"true"});
+ 	//TouchSlide({slideCell:"#slidebox",effect:"leftLoop"});
+ 	jQuery("#slidebox").slide({titCell:".hd ul",mainCell:".bd ul", effect:"leftLoop",autoPlay:"true",autoPage:"true"});
+ })
