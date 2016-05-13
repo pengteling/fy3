@@ -34,4 +34,16 @@ $(function(){
  	//jQuery(".slidebox").slide({titCell:".hd ul",mainCell:".bd", effect:"fade",autoPlay:"true",autoPage:"true"});
  	//TouchSlide({slideCell:"#slidebox",effect:"leftLoop"});
  	jQuery("#slidebox").slide({titCell:".hd ul",mainCell:".bd ul", effect:"leftLoop",autoPlay:"true",autoPage:"true"});
+ 	$("input[type=submit]").click(function(){
+ 		var mob = $(".ipt input").val();
+ 		var regexp = /^1([3-9])+\d{9}$/g;
+ 		if(regexp.test(mob)) {
+ 			//alert("通过");
+ 			return ture;
+ 		}
+ 		else{
+ 			alert("手机号格式不正确");
+ 			return false;
+ 		}
+ 	})
  })
